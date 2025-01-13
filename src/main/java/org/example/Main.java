@@ -11,10 +11,10 @@ public class Main {
      */
     public Main() {};
 
-    static final String cognome=""; // assegnare alla variabile il proprio cognome
-    static final String nome=""; // assegnare alla variabile il proprio nome
-    static final String currentDate="19/11/24";
-    static final String classe="3DI";
+    static final String cognome="Lucchetti"; // assegnare alla variabile il proprio cognome
+    static final String nome="Andrea"; // assegnare alla variabile il proprio nome
+    static final String currentDate="13/01/25";
+    static final String classe="4DI";
 
     /**
      * Programma principale modificare solo dove indicato nei commenti
@@ -63,6 +63,7 @@ public class Main {
     public static int somma(int a,int b) {
         int risposta=0;
         // TODO: SCRIVI QUI IL CODICE
+        int risposta = a+b;
         return risposta;
     }
 
@@ -76,6 +77,14 @@ public class Main {
     public static String isMaggiorenne(int age) {
         String risposta="maggiorenne,minorenne";
         // TODO: SCRIVI QUI IL CODICE
+        eta = risposta.split(",");
+        if(age>=18){
+            return eta[0];
+        }
+
+        else{
+            return eta[1];
+        }
         return risposta;
     }
 
@@ -88,6 +97,17 @@ public class Main {
     public static boolean isVocale(char carattere) {
         boolean risposta=false;
         // TODO: SCRIVI QUI IL CODICE
+        System.out.println("inserisci un carattere: ");
+        char carattere = scanner.next().charArt(0);
+
+        if (Character.isLetter(carattere)){
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+                System.out.println(carattere + "è una vocale.");
+                else{
+                    System.out.println(carattere + "è una consonante.");
+                }
+            }
+        }
         return risposta;
     }
 
@@ -102,6 +122,24 @@ public class Main {
     public static String tipoTriangolo(float lato1, float lato2, float lato3) {
         String risposta="equilatero,isoscele,scaleno";
         // TODO: SCRIVI QUI IL CODICE
+        System.out.println("inserisci la lunghezza del primo lato: ");
+        double lato1 = scanner.nextDouble();
+        
+        System.out.println("inserisci la lunghezza del secondo lato: ");
+        double lato2 = scanner.nextDouble();
+        
+        System.out.println("inserisci la lunghezza del terzo lato: ");
+        double lato3 = scanner.nextDouble();
+
+        if (lato1 == lato2 && lato2 == lato3){}
+            System.out.println("il triangolo è equilatero.");
+        else if (lato1 == lato2 || lato2 == lato3 || lato1 == lato3){
+            System.out.println("il triangolo è isoscele.");
+        else{
+            System.out.println("il triangolo è scaleno.");
+        }
+        }
+        }
         return risposta;
     }
 
@@ -115,6 +153,10 @@ public class Main {
     public static String giornoSettimana(int giorno) {
         String risposta="lunedì,martedì,mercoledì,giovedì,venerdì,sabato,domenica";
         // TODO: SCRIVI QUI IL CODICE
+        System.out.print("inserisci il giorno dell'anno(1-365):");
+        int giornoAnno=scanner.nextInt();
+        int indiceGiorno=(giornoAnno-1)%7;
+        System.out.println("il giorno della settimana per il giorno"+giornoAnno+"dell'anno è:"+giornoSettimana[indiceGiorno]);
         return risposta;
     }
 
@@ -130,6 +172,24 @@ public class Main {
     public static String ordineDecrescente(int fine, int inizio) {
         String risposta="100,99,98";
         // TODO: SCRIVI QUI IL CODICE
+        System.out.println("inserisci il valore di 'fine':");
+        int fine=scanner.nextInt();
+        System.out.println("inserisci il valore di 'inizio':");
+        int inizio=scanner.nextInt();
+        if (fine>inizio){
+            StringBuilder result=new StringBuilder();
+            for (int i=fine; i>=inizio; i--){
+                if (i!=fine){
+                    result.append(",");
+                }
+                result.append(i);
+            }
+            System.out.println("i numeri in ordine decrescente sono:"+result.toString());
+            else {
+                System.out.println("'fine' deve essere maggiore di 'inizio'.");
+            }
+        }
+
         return risposta;
     }
 
