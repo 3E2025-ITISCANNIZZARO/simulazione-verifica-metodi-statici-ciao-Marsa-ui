@@ -3,7 +3,7 @@ package org.example;
 /**
  *  Verifica di informatica 3di
  *  @author prof. Zanzottera Fabio
- *  @version 1.0-3di, 19/11/24
+ *  @version 1.0-3di, 19/11/24 
  */
 public class Main {
     /**
